@@ -1,38 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool visited[100010] ={false};
-map<int,vector<int>>vi;
-int n,m,target = 5;
-vector<vector<int>>arr(n+3,vector<int>(m+3));
+
+int n;
 
 
-
-void dfs(int node)
-{
-    visited[node] = true;
-
-    for(int child : vi[node])
-    {
-        if(!visited[child])
-        {
-            dfs(child);
-        }
-    }
-
-}
-
-
-
-int gcd(int a  ,int  b)
-{
-    if(a==0)return b;
-    return gcd(b%a,a);
-}
-
-bool check(int r,int c)
-{
-    return r>=0 && c>=0 && r<=1 && c<=1;
-}
 int rec(int num)
 {
  if(num<10){return num ;}
@@ -52,14 +23,6 @@ cout<<n<<endl;
 }
 
 
-/*
-3 3
-1 2 3
-4 5 6
-7 8 9
-*/
-
-
 
 
 int main () {
@@ -75,9 +38,4 @@ int main () {
     return 0;
 }
 
-/*
-3 3
- 1 2 3
- 4 5 6
- 7 8 9
-*/
+
